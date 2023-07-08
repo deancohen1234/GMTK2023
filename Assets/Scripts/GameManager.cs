@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class GameManager : MonoBehaviour
 {
+    public PlayableDirector director;
+
     public CanvasGroup mainMenu;
     public EndScreen endScreen;
     public ScoreTracker scoreTracker;
@@ -24,9 +27,21 @@ public class GameManager : MonoBehaviour
     {
         mainMenu.alpha = 1;
         endScreen.Hide();
+
+        director.stopped += OnDirectorStopped;
     }
 
     public void StartLevel()
+    {
+        director.Play();
+    }
+
+    private void OnDirectorStopped(PlayableDirector director)
+    {
+        StartShooter();
+    }
+
+    private void StartShooter()
     {
         scoreTracker.score = 0;
         scoreTracker.UpdateScoreText();
