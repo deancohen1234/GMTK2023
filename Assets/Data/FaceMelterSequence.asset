@@ -16,7 +16,7 @@ MonoBehaviour:
   songBPM: 191
   shooterTimeFrames:
   - subdivision: 2
-    shooterType: 1
+    shooterType: 0
     endTime: 5
     waveFrequency: 1
     projectileSpeed: 15
