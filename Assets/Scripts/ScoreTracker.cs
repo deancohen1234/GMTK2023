@@ -8,6 +8,7 @@ public class ScoreTracker : MonoBehaviour
     public float pointsPerHit = 100f;
     public TextMeshProUGUI scoreText;
 
+
     [HideInInspector]
     public float score = 0;
     private int timesHit;

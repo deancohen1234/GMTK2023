@@ -13,6 +13,14 @@ public class GameManager : MonoBehaviour
 
     public ShooterSequencer sequencer;
 
+    [Header("Rankings")]
+    public float dRankThreshold = 0.5f;
+    public float cRankThreshold = 0.6f;
+    public float bRankThreshold = 0.7f;
+    public float aRankThreshold = 0.8f;
+    public float sRankThreshold = 0.9f;
+    public float sSRankThreshold = 0.95f;
+
     private int shotsHit;
 
     public static GameManager instance;
@@ -59,7 +67,7 @@ public class GameManager : MonoBehaviour
     public void ShowEndScreen(int totalShots)
     {
         float finalScore = (float)shotsHit / (float)totalShots;
-        endScreen.Show(finalScore, "A");
+        endScreen.Show(finalScore, GetRank(finalScore));
     }
 
     public void QuitGame()
@@ -71,6 +79,38 @@ public class GameManager : MonoBehaviour
     public void UpdateShotsHit(int _showsHit)
     {
         shotsHit = _showsHit;
+    }
+
+    private string GetRank(float percentage)
+    {
+        if (percentage >= sSRankThreshold)
+        {
+            return "SS-alacious";
+        }
+        else if (percentage >= sSRankThreshold)
+        {
+            return "S-ick";
+        }
+        else if (percentage >= aRankThreshold)
+        {
+            return "A-wesome";
+        }
+        else if (percentage >= bRankThreshold)
+        {
+            return "B-y Goly";
+        }
+        else if (percentage >= cRankThreshold)
+        {
+            return "C-ould Improve";
+        }
+        else if (percentage >= dRankThreshold)
+        {
+            return "D-eserved More";
+        }
+        else
+        {
+            return "E-hhh";
+        }
     }
 
 }
