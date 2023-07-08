@@ -19,7 +19,7 @@ public class ShooterTimeFrame
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ShooterSequence", order = 1)]
 public class ShooterSequence : ScriptableObject
 {
-    
+    public AudioClip song;
 
     public float songBPM = 120;
     public ShooterTimeFrame[] shooterTimeFrames;

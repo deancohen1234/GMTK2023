@@ -6,7 +6,6 @@ public class ShooterSequencer : MonoBehaviour
 {
     public ShooterSequence sequence;
     public Shooter shooter;
-    public AudioClip track;
 
     private AudioSource source;
     private int sequenceIndex = 0;
@@ -36,17 +35,17 @@ public class ShooterSequencer : MonoBehaviour
         EvaluateMusicTrackTime();
     }
 
-    private void StartSequence()
+    public void StartSequence()
     {
         shooter.Activate();
-        source.clip = track;
+        source.clip = sequence.song;
 
         UpdateTimeFrame();
 
         source.Play();
     }
 
-    private void StopSequence()
+    public void StopSequence()
     {
         shooter.DeActivate();
 
