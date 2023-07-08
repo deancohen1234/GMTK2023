@@ -18,5 +18,7 @@ public class SwoopingShooter : Shooter
         p.transform.position = transform.position;
         p.transform.forward = direction;
         p.Fire(projectileSpeed);
+
+        p.GetComponent<MeshRenderer>().material.color = color;
     }
 }

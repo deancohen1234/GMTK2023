@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc39441b1f729f84e8bfd580db1f7aab, type: 3}
+  m_Name: ShooterSequence
+  m_EditorClassIdentifier: 
+  songBPM: 120
+  shooterTimeFrames:
+  - subdivision: 2
+    endTime: 15.75
+    shotDelay: 0.5
+    waveFrequency: 1
+    projectileSpeed: 15
+    color: {r: 0.9716981, g: 0, b: 0.60004985, a: 1}
+  - subdivision: 3
+    endTime: 180
+    shotDelay: 0.15
+    waveFrequency: 7
+    projectileSpeed: 25
+    color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}

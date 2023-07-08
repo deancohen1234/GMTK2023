@@ -7,6 +7,8 @@ public class Shooter : MonoBehaviour
     public GameObject projectile;
     public float shotDelay = 0.5f;
     public float projectileSpeed = 6f;
+    [HideInInspector]
+    public Color color;
 
     private float nextShotTime;
     private int objectPoolerIndex;
@@ -39,6 +41,11 @@ public class Shooter : MonoBehaviour
         isActive = false;
     }
 
+    public void SetColor(Color _color)
+    {
+        color = _color;
+    }
+
     private void FireUpdate()
     {
         if (Time.time > nextShotTime)
@@ -58,5 +65,6 @@ public class Shooter : MonoBehaviour
         p.transform.position = transform.position;
         p.transform.forward = Vector3.forward;
         p.Fire(projectileSpeed);
+
     }
 }
