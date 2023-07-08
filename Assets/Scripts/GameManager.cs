@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour
 
     public void StartLevel()
     {
+        scoreTracker.score = 0;
+        scoreTracker.UpdateScoreText();
+        shotsHit = 0;
+        mainMenu.alpha = 0;
         director.Play();
     }
 
@@ -43,10 +47,6 @@ public class GameManager : MonoBehaviour
 
     private void StartShooter()
     {
-        scoreTracker.score = 0;
-        scoreTracker.UpdateScoreText();
-        shotsHit = 0;
-        mainMenu.alpha = 0;
         sequencer.StartSequence();
     }
 
