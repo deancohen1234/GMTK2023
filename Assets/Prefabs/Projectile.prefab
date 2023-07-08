@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5719940181457005726}
   - component: {fileID: 6862662404937754358}
   - component: {fileID: 3377769901928343562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 1462998099842307791}
   - component: {fileID: 5497182756936413722}
   - component: {fileID: -3250092974467033651}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4906,7 +4906,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8436502621182474822}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -4923,4 +4923,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1267be34ba157144381ee05fb11707d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 50
+  zDeath: 26
