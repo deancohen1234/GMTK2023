@@ -5,8 +5,8 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public GameObject projectile;
-
     public float shotDelay = 0.5f;
+    public float projectileSpeed = 6f;
 
     private float nextShotTime;
     private int objectPoolerIndex;
@@ -14,7 +14,7 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        objectPoolerIndex = ObjectPooler.SharedInstance.AddObject(projectile, 5);
+        objectPoolerIndex = ObjectPooler.SharedInstance.AddObject(projectile, 30);
     }
 
     // Update is called once per frame
@@ -28,20 +28,19 @@ public class Shooter : MonoBehaviour
         if (Time.time > nextShotTime)
         {
             nextShotTime = Time.time + shotDelay;
-            FireProjectile();
+            Projectile p = ObjectPooler.SharedInstance.GetPooledObject(objectPoolerIndex).GetComponent<Projectile>();
+            FireProjectile(p);
         }
     }
 
     
 
-    private void FireProjectile()
+    protected virtual void FireProjectile(Projectile p)
     {
-        Projectile p = ObjectPooler.SharedInstance.GetPooledObject(objectPoolerIndex).GetComponent<Projectile>();
-
         //set direction and fire
         p.gameObject.SetActive(true);
         p.transform.position = transform.position;
         p.transform.forward = Vector3.forward;
-        p.Fire();
+        p.Fire(projectileSpeed);
     }
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 10f;
 
     //past this z, kill projectile
     public float zDeath = 26f;
 
+    private float speed;
     private bool isFired = false;
     // Start is called before the first frame update
     void Start()
@@ -30,8 +30,9 @@ public class Projectile : MonoBehaviour
     }
 
 
-    public void Fire()
+    public void Fire(float _speed)
     {
+        speed = _speed;
         isFired = true;
     }
 

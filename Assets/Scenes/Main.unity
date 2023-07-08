@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 334125465}
   - component: {fileID: 334125464}
   - component: {fileID: 334125468}
+  - component: {fileID: 334125469}
   m_Layer: 0
   m_Name: Shooter
   m_TagString: Untagged
@@ -228,13 +229,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334125463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67211425a87741841874a3928e566426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 8436502621182474822, guid: f353fcca9607a3b4eb27906765a28ccb, type: 3}
   shotDelay: 0.5
+  projectileSpeed: 6
+--- !u!114 &334125469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334125463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0db2bf2b057c3e41a24d84423f9f91e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 8436502621182474822, guid: f353fcca9607a3b4eb27906765a28ccb, type: 3}
+  shotDelay: 1
+  projectileSpeed: 15
+  frequency: 1
+  angleDamper: 0.5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479e567f6c4f4f84cad694530cf1886d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 80
+  moveSpeed: 50
   range: {x: -40, y: 40}
 --- !u!136 &1432789588
 CapsuleCollider:
