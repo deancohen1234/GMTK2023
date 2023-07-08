@@ -11,16 +11,32 @@ public class Shooter : MonoBehaviour
     private float nextShotTime;
     private int objectPoolerIndex;
 
+    public bool isActive { private set; get; }
+
     // Start is called before the first frame update
     void Start()
     {
         objectPoolerIndex = ObjectPooler.SharedInstance.AddObject(projectile, 30);
+        isActive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        FireUpdate();
+        if (isActive)
+        {
+            FireUpdate();
+        }
+    }
+
+    public void Activate()
+    {
+        isActive = true;
+    }
+
+    public void DeActivate()
+    {
+        isActive = false;
     }
 
     private void FireUpdate()
