@@ -12,6 +12,7 @@ public class ShooterSequencer : MonoBehaviour
 
     private bool isPlaying = false;
 
+    #region MonoBehavior
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,7 @@ public class ShooterSequencer : MonoBehaviour
             EvaluateMusicTrackTime();
         }
     }
+    #endregion
 
     public void StartSequence()
     {
@@ -126,13 +128,11 @@ public class ShooterSequencer : MonoBehaviour
 
     private void UpdateTimeFrame()
     {
+        shooter.shooterType = sequence.shooterTimeFrames[sequenceIndex].shooterType;
         shooter.shotDelay = GetShotDelay(sequence.shooterTimeFrames[sequenceIndex].subdivision);
         shooter.projectileSpeed = sequence.shooterTimeFrames[sequenceIndex].projectileSpeed;
-
-        if (shooter is SwoopingShooter sweeper)
-        {
-            sweeper.frequency = sequence.shooterTimeFrames[sequenceIndex].waveFrequency;
-        }
+        shooter.frequency = sequence.shooterTimeFrames[sequenceIndex].waveFrequency;
+        shooter.angleDamper = sequence.shooterTimeFrames[sequenceIndex].angleDampen;
 
         shooter.SetColor(sequence.shooterTimeFrames[sequenceIndex].color);
     }

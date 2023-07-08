@@ -16,14 +16,16 @@ MonoBehaviour:
   songBPM: 191
   shooterTimeFrames:
   - subdivision: 2
-    endTime: 15.75
-    shotDelay: 0.5
+    shooterType: 1
+    endTime: 5
     waveFrequency: 1
     projectileSpeed: 15
     color: {r: 0.9716981, g: 0, b: 0.60004985, a: 1}
+    angleDampen: 0.35
   - subdivision: 3
+    shooterType: 1
     endTime: 30000
-    shotDelay: 0.15
-    waveFrequency: 7
+    waveFrequency: 15
     projectileSpeed: 25
     color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}
+    angleDampen: 0.35

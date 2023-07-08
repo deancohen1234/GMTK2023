@@ -17,13 +17,11 @@ MonoBehaviour:
   shooterTimeFrames:
   - subdivision: 2
     endTime: 15.75
-    shotDelay: 0.5
     waveFrequency: 1
     projectileSpeed: 15
     color: {r: 0.9716981, g: 0, b: 0.60004985, a: 1}
-  - subdivision: 3
+  - subdivision: 4
     endTime: 300000
-    shotDelay: 0.15
     waveFrequency: 7
     projectileSpeed: 25
     color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}

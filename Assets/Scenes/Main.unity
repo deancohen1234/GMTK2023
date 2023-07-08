@@ -917,7 +917,7 @@ GameObject:
   - component: {fileID: 334125466}
   - component: {fileID: 334125465}
   - component: {fileID: 334125464}
-  - component: {fileID: 334125469}
+  - component: {fileID: 334125468}
   m_Layer: 0
   m_Name: Shooter
   m_TagString: Untagged
@@ -1003,7 +1003,7 @@ Transform:
   m_Father: {fileID: 2075042795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &334125469
+--- !u!114 &334125468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1012,15 +1012,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 334125463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0db2bf2b057c3e41a24d84423f9f91e, type: 3}
+  m_Script: {fileID: 11500000, guid: 67211425a87741841874a3928e566426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 8436502621182474822, guid: f353fcca9607a3b4eb27906765a28ccb, type: 3}
+  shooterType: 0
   shotDelay: 0.25
   projectileSpeed: 15
-  color: {r: 0, g: 0, b: 0, a: 0}
   frequency: 1
-  angleDamper: 0.5
+  angleDamper: 0.35
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &370094076
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,8 +2735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89651f086a9556144be3e1ae687746f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sequence: {fileID: 11400000, guid: 7496eb420174f9544a22602b4552ecd2, type: 2}
-  shooter: {fileID: 334125469}
+  sequence: {fileID: 11400000, guid: 7410a1ee1b01eb94abc4e0be513db17c, type: 2}
+  shooter: {fileID: 334125468}
 --- !u!4 &2075042795
 Transform:
   m_ObjectHideFlags: 0
