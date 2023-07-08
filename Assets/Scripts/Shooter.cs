@@ -12,6 +12,7 @@ public class Shooter : MonoBehaviour
 
     private float nextShotTime;
     private int objectPoolerIndex;
+    protected int shotsFired;
 
     public bool isActive { private set; get; }
 
@@ -34,6 +35,9 @@ public class Shooter : MonoBehaviour
     public void Activate()
     {
         isActive = true;
+
+        //reset shots fired
+        shotsFired = 0;
     }
 
     public void DeActivate()
@@ -44,6 +48,11 @@ public class Shooter : MonoBehaviour
     public void SetColor(Color _color)
     {
         color = _color;
+    }
+
+    public int GetShotsFired()
+    {
+        return shotsFired;
     }
 
     private void FireUpdate()
@@ -65,6 +74,8 @@ public class Shooter : MonoBehaviour
         p.transform.position = transform.position;
         p.transform.forward = Vector3.forward;
         p.Fire(projectileSpeed);
+
+        shotsFired++;
 
     }
 }

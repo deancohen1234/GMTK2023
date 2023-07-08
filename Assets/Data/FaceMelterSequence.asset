@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc39441b1f729f84e8bfd580db1f7aab, type: 3}
   m_Name: FaceMelterSequence
   m_EditorClassIdentifier: 
-  songBPM: 120
+  song: {fileID: 8300000, guid: 077bde7e055b4aa489a92e5e48ba3e62, type: 3}
+  songBPM: 191
   shooterTimeFrames:
   - subdivision: 2
     endTime: 15.75
@@ -21,7 +22,7 @@ MonoBehaviour:
     projectileSpeed: 15
     color: {r: 0.9716981, g: 0, b: 0.60004985, a: 1}
   - subdivision: 3
-    endTime: 180
+    endTime: 30000
     shotDelay: 0.15
     waveFrequency: 7
     projectileSpeed: 25

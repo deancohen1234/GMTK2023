@@ -20,5 +20,7 @@ public class SwoopingShooter : Shooter
         p.Fire(projectileSpeed);
 
         p.GetComponent<MeshRenderer>().material.color = color;
+
+        shotsFired++;
     }
 }

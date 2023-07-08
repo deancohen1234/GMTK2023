@@ -10,6 +10,8 @@ public class ShooterSequencer : MonoBehaviour
     private AudioSource source;
     private int sequenceIndex = 0;
 
+    private bool isPlaying = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,6 @@ public class ShooterSequencer : MonoBehaviour
             if (!shooter.isActive)
             {
                 StartSequence();
-
             }
             else
             {
@@ -32,17 +33,31 @@ public class ShooterSequencer : MonoBehaviour
             }
         }
 
-        EvaluateMusicTrackTime();
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            //finish song
+            source.time = sequence.song.length - 5f;
+
+        }
+
+        //only evaluate when the sequence is running
+        if (isPlaying)
+        {
+            EvaluateMusicTrackTime();
+        }
     }
 
     public void StartSequence()
     {
         shooter.Activate();
         source.clip = sequence.song;
+        source.time = 0;
 
         UpdateTimeFrame();
 
         source.Play();
+
+        isPlaying = true;
     }
 
     public void StopSequence()
@@ -50,6 +65,13 @@ public class ShooterSequencer : MonoBehaviour
         shooter.DeActivate();
 
         source.Stop();
+
+        isPlaying = false;
+
+        sequenceIndex = 0;
+
+        //send shots fired so we can display a score
+        GameManager.instance.ShowEndScreen(shooter.GetShotsFired());
     }
 
     private float GetShotDelay(ShooterTimeFrame.Subdivision subdivision)
@@ -74,13 +96,15 @@ public class ShooterSequencer : MonoBehaviour
 
     private void EvaluateMusicTrackTime()
     {
-        if (!source.isPlaying)
+        if (sequenceIndex >= sequence.shooterTimeFrames.Length)
         {
             return;
         }
 
-        if (sequenceIndex >= sequence.shooterTimeFrames.Length)
+        //check if song ends
+        if (!source.isPlaying)
         {
+            StopSequence();
             return;
         }
 

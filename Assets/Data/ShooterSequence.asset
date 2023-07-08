@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc39441b1f729f84e8bfd580db1f7aab, type: 3}
   m_Name: ShooterSequence
   m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: dd9758a9dadf5ef4b95b1f41537e83a8, type: 3}
   songBPM: 120
   shooterTimeFrames:
   - subdivision: 2
@@ -21,7 +22,7 @@ MonoBehaviour:
     projectileSpeed: 15
     color: {r: 0.9716981, g: 0, b: 0.60004985, a: 1}
   - subdivision: 3
-    endTime: 180
+    endTime: 300000
     shotDelay: 0.15
     waveFrequency: 7
     projectileSpeed: 25

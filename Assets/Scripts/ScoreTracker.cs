@@ -8,7 +8,9 @@ public class ScoreTracker : MonoBehaviour
     public float pointsPerHit = 100f;
     public TextMeshProUGUI scoreText;
 
-    private float score = 0;
+    [HideInInspector]
+    public float score = 0;
+    private int timesHit;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,8 @@ public class ScoreTracker : MonoBehaviour
         if (p != null)
         {
             score += pointsPerHit;
-            scoreText.text = "Damage: " + score.ToString();
+            timesHit++;
+            UpdateScoreText();
             OnProjectileHit(p);
         }
     }
@@ -37,5 +40,12 @@ public class ScoreTracker : MonoBehaviour
     private void OnProjectileHit(Projectile p)
     {
         p.Die();
+
+        GameManager.instance.UpdateShotsHit(timesHit);
+    }
+
+    public void UpdateScoreText()
+    {
+        scoreText.text = "Damage: " + score.ToString();
     }
 }
