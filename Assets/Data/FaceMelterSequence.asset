@@ -121,7 +121,7 @@ MonoBehaviour:
     color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}
     angleDampen: 0.4
   - subdivision: 1
-    shooterType: 1
+    shooterType: 2
     endTime: 108.8
     waveFrequency: 100
     projectileSpeed: 85
@@ -129,7 +129,7 @@ MonoBehaviour:
     angleDampen: 0.35
   - subdivision: 1
     shooterType: 1
-    endTime: 129.5
+    endTime: 129
     waveFrequency: 100
     projectileSpeed: 85
     color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}
@@ -144,7 +144,7 @@ MonoBehaviour:
   - subdivision: 0
     shooterType: 1
     endTime: 148
-    waveFrequency: 5
+    waveFrequency: 100
     projectileSpeed: 85
     color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}
     angleDampen: 0.35
@@ -155,10 +155,24 @@ MonoBehaviour:
     projectileSpeed: 65
     color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}
     angleDampen: 0.2
-  - subdivision: 4
-    shooterType: 2
-    endTime: 149.3
-    waveFrequency: 5
-    projectileSpeed: 65
+  - subdivision: 2
+    shooterType: 1
+    endTime: 169.6
+    waveFrequency: 100
+    projectileSpeed: 85
     color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}
-    angleDampen: 0.2
+    angleDampen: 0.35
+  - subdivision: 4
+    shooterType: 0
+    endTime: 179.5
+    waveFrequency: 5
+    projectileSpeed: 75
+    color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}
+    angleDampen: 0.4
+  - subdivision: 2
+    shooterType: 2
+    endTime: 185
+    waveFrequency: 100
+    projectileSpeed: 85
+    color: {r: 0.9339623, g: 0.8557021, b: 0.4273318, a: 1}
+    angleDampen: 0.35

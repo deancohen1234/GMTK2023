@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &59001391
 RectTransform:
   m_ObjectHideFlags: 0
@@ -257,6 +257,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59001390}
   m_CullTransparentMesh: 1
+--- !u!1 &85656427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85656429}
+  - component: {fileID: 85656428}
+  m_Layer: 0
+  m_Name: ANNOUNCER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &85656428
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85656427}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 75e40374772e03647aae34d3502be048, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &85656429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85656427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 577.3632, y: 573.29395, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &140110510
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +470,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 18
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -477,7 +605,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.45
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1413,15 +1541,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410462909}
-  m_LocalRotation: {x: 0, y: 0.9396927, z: -0.3420201, w: 0}
-  m_LocalPosition: {x: 0, y: 13, z: 14.9}
+  m_LocalRotation: {x: -0, y: 0.947935, z: -0.3184638, w: 0}
+  m_LocalPosition: {x: 0, y: 44.48, z: 51.07}
   m_LocalScale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 322039801}
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 40, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 37.14, y: 180, z: 0}
 --- !u!1001 &447565277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1711,14 +1839,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9c0240c54476c4c9ea7509452a5521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainHeight: 50
+  terrainHeight: 60
   terrainsPrefabs:
-  - {fileID: 1621244664893880482, guid: dfdcd3e95319ace45be16825d86f5ba4, type: 3}
-  - {fileID: 1621244664893880482, guid: dfdcd3e95319ace45be16825d86f5ba4, type: 3}
-  - {fileID: 1621244664893880482, guid: dfdcd3e95319ace45be16825d86f5ba4, type: 3}
+  - {fileID: 8532018648218723071, guid: aa2a5665253672c46bd28e1858cf5438, type: 3}
+  - {fileID: 7295278721201099802, guid: 38e7dd8b790b3284582ecba41f55a30b, type: 3}
+  - {fileID: 9161613806157363288, guid: ee582f984558c524ba9809f18cf10a8d, type: 3}
   startPoint: {fileID: 1077526892}
-  scrollSpeed: 20
-  scrollCutoffZ: 45
+  scrollSpeed: 70
+  scrollCutoffZ: 80
 --- !u!4 &515168306
 Transform:
   m_ObjectHideFlags: 0
@@ -2076,7 +2204,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.45
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2635,7 +2763,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0e4eab474fb95ab4a9784f9a343b0f87, type: 2}
+  - {fileID: 2100000, guid: ffb2a055fbce87b42800adb8d9064afb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2674,7 +2802,7 @@ Transform:
   m_GameObject: {fileID: 787782802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -9.7, z: -4}
-  m_LocalScale: {x: 199.8996, y: 0.01, z: 178.275}
+  m_LocalScale: {x: 671.9425, y: 0.01, z: 653.3244}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2704,7 +2832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804261053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66, y: 0, z: 2.2}
+  m_LocalPosition: {x: 66, y: 0, z: 24.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3155,8 +3283,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0.9396927, z: -0.3420201, w: 0}
-  m_LocalPosition: {x: 0, y: 13, z: 14.9}
+  m_LocalRotation: {x: 0, y: 0.94793504, z: -0.31846383, w: 0}
+  m_LocalPosition: {x: 0, y: 44.48, z: 51.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3282,7 +3410,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.5
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3356,7 +3484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077526891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -66, y: 0, z: 2.2}
+  m_LocalPosition: {x: -66, y: 0, z: 24.550003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3381,7 +3509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1096828169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3518,10 +3646,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PUNCH FACE
+  m_text: You are Pretty Face
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 48753e7757335b546ac0844381e506fd, type: 2}
+  m_sharedMaterial: {fileID: -5846566066100311825, guid: 48753e7757335b546ac0844381e506fd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3545,13 +3673,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 18
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4268,7 +4396,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.45
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4507,7 +4635,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 18
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5023,14 +5151,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9c0240c54476c4c9ea7509452a5521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainHeight: 50
+  terrainHeight: 60
   terrainsPrefabs:
-  - {fileID: 1621244664893880482, guid: dfdcd3e95319ace45be16825d86f5ba4, type: 3}
-  - {fileID: 1621244664893880482, guid: dfdcd3e95319ace45be16825d86f5ba4, type: 3}
-  - {fileID: 1621244664893880482, guid: dfdcd3e95319ace45be16825d86f5ba4, type: 3}
+  - {fileID: 8532018648218723071, guid: aa2a5665253672c46bd28e1858cf5438, type: 3}
+  - {fileID: 7295278721201099802, guid: 38e7dd8b790b3284582ecba41f55a30b, type: 3}
+  - {fileID: 9161613806157363288, guid: ee582f984558c524ba9809f18cf10a8d, type: 3}
   startPoint: {fileID: 804261054}
-  scrollSpeed: 20
-  scrollCutoffZ: 45
+  scrollSpeed: 70
+  scrollCutoffZ: 80
 --- !u!4 &1921557713
 Transform:
   m_ObjectHideFlags: 0
@@ -5278,7 +5406,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.5
+  m_fontSize: 18
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
