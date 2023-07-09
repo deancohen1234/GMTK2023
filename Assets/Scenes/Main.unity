@@ -342,7 +342,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 72
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 56.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Doexys Beats Mars
+  m_text: Mars by Deoxys Beats
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 48753e7757335b546ac0844381e506fd, type: 2}
   m_sharedMaterial: {fileID: -5846566066100311825, guid: 48753e7757335b546ac0844381e506fd, type: 2}
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 49.8
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67211425a87741841874a3928e566426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 8436502621182474822, guid: f353fcca9607a3b4eb27906765a28ccb, type: 3}
+  projectile: {fileID: 1868600202686581807, guid: 964090426da1adc4b8044e7763367545, type: 3}
   shooterType: 0
   shotDelay: 0.25
   projectileSpeed: 15
@@ -2076,7 +2076,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.5
+  m_fontSize: 56.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3255,7 +3255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vocaloid Style High Speed Tan
+  m_text: FACE MELTER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 48753e7757335b546ac0844381e506fd, type: 2}
   m_sharedMaterial: {fileID: -5846566066100311825, guid: 48753e7757335b546ac0844381e506fd, type: 2}
@@ -3282,7 +3282,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 52.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3545,7 +3545,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 72
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4268,7 +4268,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.75
+  m_fontSize: 56.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4507,7 +4507,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 72
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5278,7 +5278,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 33.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
