@@ -4935,7 +4935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2590029968792166490}
   - component: {fileID: 4345872554173777816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BULLET
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4989,7 +4989,7 @@ GameObject:
   - component: {fileID: 5468299166187702324}
   - component: {fileID: 8956699286035351441}
   - component: {fileID: 6604636339964031835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: YaPF_BULLET
   m_TagString: Untagged
   m_Icon: {fileID: 0}

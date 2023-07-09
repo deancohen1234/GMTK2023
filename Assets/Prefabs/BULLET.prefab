@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1416505874079287673}
   - component: {fileID: 871013384053386939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BULLET
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,6 +107,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4aba919f42503ec4c8f2fd40ad1231e9, type: 3}
       propertyPath: m_Name
       value: YaPF_BULLET
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4aba919f42503ec4c8f2fd40ad1231e9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aba919f42503ec4c8f2fd40ad1231e9, type: 3}
