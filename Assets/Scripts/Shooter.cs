@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ShooterType { SinSweep, Random}
+public enum ShooterType { SinSweep, Random, None}
 
 public class Shooter : MonoBehaviour
 {
@@ -80,6 +80,8 @@ public class Shooter : MonoBehaviour
             case ShooterType.Random:
                 RandomFireProjectile(p);
                 break;
+            case ShooterType.None:
+                return;
         }
 
         //set direction and fire
