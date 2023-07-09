@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowEndScreen(int totalShots)
     {
+        Debug.Log("total: " + totalShots);
         float finalScore = (float)shotsHit / (float)totalShots;
         endScreen.Show(finalScore, GetRank(finalScore));
     }

@@ -23,6 +23,8 @@ public class ScoreTracker : MonoBehaviour
 
     private int currentFaceIndex = 0;
 
+    private const int TOTALSHOTS = 729;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +39,6 @@ public class ScoreTracker : MonoBehaviour
             damageFaceValue = 0;
         }
 
-        if (Time.time >= nextResetTime)
-        {
-            damageFaceValue = Mathf.Max(0, damageFaceValue - 1);
-            nextResetTime = Time.time + resetTickTime;
-        }
 
         UpdateFaceTexture();
     }
@@ -70,20 +67,27 @@ public class ScoreTracker : MonoBehaviour
 
     private void UpdateFaceTexture()
     {
-        int highThreshold = currentFaceIndex * faceTransitionStep;
-        int lowThreshold = currentFaceIndex * faceTransitionStep - 1;
-        if (currentFaceIndex == 0)
-        {
-            lowThreshold = 0;
-        }
+        float percentOfMaxShots = (float)damageFaceValue / TOTALSHOTS;
 
-        if (damageFaceValue > highThreshold)
+        if (percentOfMaxShots < 0.2f)
         {
-            currentFaceIndex = Mathf.Clamp(currentFaceIndex + 1, 0, faces.Length - 1);
+            currentFaceIndex = 0;
         }
-        else if (damageFaceValue < lowThreshold)
+        else if (percentOfMaxShots >= 0.2f && percentOfMaxShots < 0.4f)
         {
-            currentFaceIndex = Mathf.Clamp(currentFaceIndex - 1, 0, faces.Length - 1);
+            currentFaceIndex = 1;
+        }
+        else if (percentOfMaxShots >= 0.4f && percentOfMaxShots < 0.6f)
+        {
+            currentFaceIndex = 2;
+        }
+        else if (percentOfMaxShots >= 0.6f && percentOfMaxShots < 0.8f)
+        {
+            currentFaceIndex = 3;
+        }
+        else
+        {
+            currentFaceIndex = 4;
         }
 
         Texture t = faces[currentFaceIndex];
