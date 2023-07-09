@@ -23,6 +23,7 @@ public class ScoreTracker : MonoBehaviour
 
     private int currentFaceIndex = 0;
 
+    //should be 729
     private const int TOTALSHOTS = 729;
 
     // Start is called before the first frame update

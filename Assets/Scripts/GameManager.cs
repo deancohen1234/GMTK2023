@@ -64,6 +64,9 @@ public class GameManager : MonoBehaviour
     public void ShowSongSelect()
     {
         mainMenu.alpha = 0;
+        mainMenu.interactable = false;
+        mainMenu.blocksRaycasts = false;
+
         songSelectMenu.alpha = 1;
         songSelectMenu.interactable = true;
         songSelectMenu.blocksRaycasts = true;
@@ -89,6 +92,8 @@ public class GameManager : MonoBehaviour
     public void ShowStartScreen()
     {
         mainMenu.alpha = 1;
+        mainMenu.interactable = true;
+        mainMenu.blocksRaycasts = true;
         endScreen.Hide();
 
         isGameRunning = false;
@@ -96,7 +101,6 @@ public class GameManager : MonoBehaviour
 
     public void ShowEndScreen(int totalShots)
     {
-        Debug.Log("total: " + totalShots);
         float finalScore = (float)shotsHit / (float)totalShots;
         endScreen.Show(finalScore, GetRank(finalScore));
     }
