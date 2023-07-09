@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public PlayableDirector director;
 
     public CanvasGroup mainMenu;
+    public CanvasGroup songSelectMenu;
     public EndScreen endScreen;
     public ScoreTracker scoreTracker;
 
@@ -34,6 +35,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         mainMenu.alpha = 1;
+        songSelectMenu.alpha = 0;
+        songSelectMenu.interactable = false;
+        songSelectMenu.blocksRaycasts = false;
+
         endScreen.Hide();
 
         director.stopped += OnDirectorStopped;
@@ -44,8 +49,27 @@ public class GameManager : MonoBehaviour
         scoreTracker.score = 0;
         scoreTracker.UpdateScoreText();
         shotsHit = 0;
-        mainMenu.alpha = 0;
+
+        songSelectMenu.alpha = 0;
+        songSelectMenu.interactable = false;
+        songSelectMenu.blocksRaycasts = false;
+
         director.Play();
+    }
+
+    public void ShowSongSelect()
+    {
+        mainMenu.alpha = 0;
+        songSelectMenu.alpha = 1;
+        songSelectMenu.interactable = true;
+        songSelectMenu.blocksRaycasts = true;
+    }
+
+    public void PlayTrack(ShooterSequence sequence)
+    {
+        sequencer.sequence = sequence;
+        StartLevel();
+        //sequencer.StartSequence();
     }
 
     private void OnDirectorStopped(PlayableDirector director)
@@ -76,9 +100,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void UpdateShotsHit(int _showsHit)
+    public void UpdateShotsHit()
     {
-        shotsHit = _showsHit;
+        shotsHit++;
     }
 
     private string GetRank(float percentage)

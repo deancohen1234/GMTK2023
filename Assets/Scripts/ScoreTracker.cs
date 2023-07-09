@@ -42,7 +42,7 @@ public class ScoreTracker : MonoBehaviour
     {
         p.Die();
 
-        GameManager.instance.UpdateShotsHit(timesHit);
+        GameManager.instance.UpdateShotsHit();
     }
 
     public void UpdateScoreText()
