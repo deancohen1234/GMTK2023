@@ -470,7 +470,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 18
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.45
+  m_fontSize: 37.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.45
+  m_fontSize: 37.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3483,7 +3483,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.5
+  m_fontSize: 34.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3746,7 +3746,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 18
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4348,6 +4348,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerHit: 100
   scoreText: {fileID: 2086791363}
+  resetTickTime: 1
+  faceTransitionStep: 20
+  faceMaterial: {fileID: 2100000, guid: 3b430247c695336439602566e2eddbdd, type: 2}
+  faces:
+  - {fileID: 2800000, guid: b3f5b49c24f3e414093aa0d672d3733a, type: 3}
+  - {fileID: 2800000, guid: 993bfe759d6301f4b932b68d49663cb7, type: 3}
+  - {fileID: 2800000, guid: 7dda75ac58fce144cb853ee25f382aae, type: 3}
+  - {fileID: 2800000, guid: 96dfe6243ac444b4eb41e40850028435, type: 3}
+  - {fileID: 2800000, guid: 2302efd4f93560e458dd0bf9eee2622b, type: 3}
   score: 0
 --- !u!54 &1432789593
 Rigidbody:
@@ -4470,7 +4479,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.45
+  m_fontSize: 37.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4710,7 +4719,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 18
   m_fontSizeBase: 76.95
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4770,7 +4779,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1688513975}
   - component: {fileID: 1688513977}
-  - component: {fileID: 1688513976}
   m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
@@ -4793,14 +4801,6 @@ Transform:
   m_Father: {fileID: 1432789591}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1688513976
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688513974}
-  m_Enabled: 1
 --- !u!20 &1688513977
 Camera:
   m_ObjectHideFlags: 0
@@ -5189,6 +5189,7 @@ MonoBehaviour:
   endScreen: {fileID: 277927583}
   scoreTracker: {fileID: 1432789592}
   sequencer: {fileID: 2075042794}
+  isGameRunning: 0
   dRankThreshold: 0.5
   cRankThreshold: 0.6
   bRankThreshold: 0.7

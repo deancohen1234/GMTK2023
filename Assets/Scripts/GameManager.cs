@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public ShooterSequencer sequencer;
 
+    public bool isGameRunning;
+
     [Header("Rankings")]
     public float dRankThreshold = 0.5f;
     public float cRankThreshold = 0.6f;
@@ -55,6 +57,8 @@ public class GameManager : MonoBehaviour
         songSelectMenu.blocksRaycasts = false;
 
         director.Play();
+
+        isGameRunning = true;
     }
 
     public void ShowSongSelect()
@@ -86,6 +90,8 @@ public class GameManager : MonoBehaviour
     {
         mainMenu.alpha = 1;
         endScreen.Hide();
+
+        isGameRunning = false;
     }
 
     public void ShowEndScreen(int totalShots)
