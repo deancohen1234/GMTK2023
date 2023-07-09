@@ -86,8 +86,6 @@ public class ScoreTracker : MonoBehaviour
             currentFaceIndex = Mathf.Clamp(currentFaceIndex - 1, 0, faces.Length - 1);
         }
 
-        Debug.Log($"Face Index: {currentFaceIndex} high {highThreshold} val: {damageFaceValue}");
-
         Texture t = faces[currentFaceIndex];
 
         faceMaterial.mainTexture = t;
